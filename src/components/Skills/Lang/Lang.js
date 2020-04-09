@@ -17,7 +17,7 @@ const Lang = (props) => {
   const langTable = langSkill.map((x)=>{
     return(
       <tr key={x.lang}>
-      <td><Tag lang={x.lang} /></td>
+      <td className='skills-name'><Tag lang={x.lang} /></td>
       <td className='skills-lvl'><div className={x.lang+'-level'}></div></td>
       </tr>
     );

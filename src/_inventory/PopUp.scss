@@ -15,8 +15,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 1400px;
+  width: 70%;
   height: 80%;
   background: #fff;
   border-radius: 20px;
@@ -53,6 +52,7 @@
 
     #popup-app {
       order: 1;
+      transform:scale(1.2);
     }
 
     #detail {
@@ -73,8 +73,9 @@
         }
 
         h2, p, li {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 400;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 300;
+          letter-spacing:0.5px;
           line-height:24px;
         }
 

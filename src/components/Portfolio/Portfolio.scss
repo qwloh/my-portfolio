@@ -9,11 +9,10 @@
 #project-area{
   display:grid;
   @include for-phone-only{
-    grid-template-columns:minmax(440px, 1fr);
+    grid-template-columns:minmax(380px, 1fr);
   }
   @include for-desktop-up{
-    grid-template-columns:repeat(2, minmax(440px, 1fr));
+    grid-template-columns:repeat(2, minmax(380px, 1fr));
   }
-  padding:10px;
-  margin-bottom: 80px;
+  margin:-20px -20px 80px -20px;
 }

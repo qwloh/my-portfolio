@@ -1,20 +1,37 @@
+@import 'media-mixins';
+
 .project-card{
-  height:500px;
+  height:480px;
+  @include for-phone-only{
+    height:430px;
+  }
   background: #fff;
   margin:20px;
   border-radius:10px;
   display:flex;
   flex-direction:column;
   overflow:hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing:0.5px;
   transition: all 0.25s;
-  box-shadow:0px 0 20px #eccc68;
+  // box-shadow:0px 0 20px #eccc68;
   &:hover{
     cursor:pointer;
   }
   .thumbnail{
     flex-grow:5;
     position:relative;
+
+    .thumbnail-inner{
+      transform:translate(-50%, -50%) scale(0.8);
+      @include for-phone-only {
+        transform:translate(-50%, -50%) scale(0.7);
+      }
+      position:absolute;
+      top:50%;
+      left:50%;
+
+    }
     .expand{
       position:absolute;
       top:25px;
@@ -33,7 +50,7 @@
 
       p{
         margin:0;
-        font-size:18px;
+        font-size:16px;
         position:absolute;
         bottom:20px;
         left:15px;

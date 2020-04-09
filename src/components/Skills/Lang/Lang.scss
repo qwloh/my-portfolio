@@ -1,8 +1,7 @@
 @import 'media-mixins';
 
 .skills-lang{
-  margin:10px 0;
-  padding:20px;
+  padding:30px 20px 30px 0;
 
   table{
     width:100%;
@@ -11,22 +10,27 @@
     tr{
 
       //langugage name
-      code{
-        line-height:32px;
-        padding:2px 8px;
-        border-radius:4px;
-        font-size:24px;
+      .skills-name{
+        width:150px;
+        code{
+          padding:1px 8px;
+          border-radius:4px;
+          font-size:18px;
+        }
       }
-
       //skill level indicator
       .skills-lvl{
         height:30px;
-        width:50%;
+        padding:0 30px;
+        @include for-phone-only{
+          padding:0;
+        }
+        box-sizing:border-box;
 
         div {
           background:#ecf0f1;
           width:100%;
-          border-radius:3px;
+          border-radius:2px;
           overflow:hidden;
           margin:auto 0;
           height:10px;

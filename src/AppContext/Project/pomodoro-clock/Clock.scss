@@ -13,9 +13,8 @@ button:focus{
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
-  width:80%; /*abs value -fixed*/
-  height:50%; /*abs value -fixed*/
-  max-height:250px;
+  width:380px; /*abs value -fixed*/
+  height:200px;
   border-radius:10px; /*abs value -fixed*/
   background:var(--lg);
   display:flex;
@@ -29,39 +28,34 @@ button:focus{
 }
 
 #head{
-  height:18%;
+  height:50px;
   display:flex;
   flex-direction:row;
-}
-
-#title{
-  width:55%;
-  display:flex;
-  background:var(--primary);
-  padding:0 10px; /*abs value -fixed*/
-}
-
-#title h1{
-  align-self: center;
-  font-size: 18px; /*abs value -fixed*/
-  font-weight:500; /*abs value -fixed*/
-  color:#fff;
-}
-
-#setting{
-  width:45%;
-  background:var(--g);
-  padding:0 5px;
-}
-
-#setting-inner{
-  display:flex;
-  height:100%;
-  flex-direction:row;
+  #title{
+    width:55%;
+    display:flex;
+    background:var(--primary);
+    padding:0 10px; /*abs value -fixed*/
+    h1{
+      align-self: center;
+      font-size: 18px; /*abs value -fixed*/
+      font-weight:500; /*abs value -fixed*/
+      color:#fff;
+    }
+  }
+  #setting{
+    width:45%;
+    background:var(--g);
+    padding:0 5px;
+    #setting-inner{
+      display:flex;
+      height:100%;
+      flex-direction:row;
+    }
+  }
 }
 
 #content{
-  height:82%;
   width:80%;
   align-self: center;
   display:flex;

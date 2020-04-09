@@ -11,18 +11,18 @@ const MyInfo = (props) => {
       <p>Front end web developer</p>
     </div>
     <div className="info-text">
-      <Svg name='location' viewBox='0 0 512 512' width='42' height='42' />
+      <Svg name='location' viewBox='0 0 512 512' width='35' height='35' />
       <p>Singapore</p>
     </div>
     <div className="info-text">
-      <Svg name='email' viewBox='0 0 512 512' width='42' height='42' />
+      <Svg name='email' viewBox='0 0 512 512' width='35' height='35' />
       <p>
         loh.qwen@gmail.com</p>
     </div>
     <div id='social'>
-      <a href='https://www.linkedin.com/in/qwenloh/' target='_blank'><Svg name='linkedIn' viewBox='0 0 512 512' width='35' height='35' fill='#2f3640'/></a>
-      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='github' viewBox='0 0 24 24' width='35' height='35' fill='#2f3640'/></a>
-      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='35' height='35' fill='#2f3640'/></a>
+      <a href='https://www.linkedin.com/in/qwenloh/' target='_blank'><Svg name='linkedIn' viewBox='0 0 512 512' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='github' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
     </div>
   </div>);
 }

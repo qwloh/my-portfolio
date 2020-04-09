@@ -40,7 +40,9 @@ const PopUp = (props) => {
     <div id="window">
     <div id='popup-card'>
       <div id="popup-app">
-        {project.app}
+        <div id="app-container">
+          {project.app}
+        </div>
       </div>
       <div id="detail">
         <div id="detail-inner">

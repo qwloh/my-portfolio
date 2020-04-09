@@ -1,0 +1,36 @@
+.settings{
+  flex-grow:1;
+  margin:0 5px;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  color:var(--dg);
+  .sess, .break{
+    p{
+      font-size:10px;
+      margin:0;
+      display:block;
+    }
+  }
+  .length{
+    font-size:14px;
+    padding:0 5px;
+  }
+  .setup{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    .settings-button{
+      padding:2px 0;
+      svg{
+        display:block;
+      }
+    }
+  }
+}
+
+
+
+button.settings-button:disabled{
+  cursor:default;
+}

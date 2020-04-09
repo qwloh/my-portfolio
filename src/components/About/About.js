@@ -4,7 +4,7 @@ import './About.scss';
 const About = (props) => {
   return(
     <div id='about' className='info-section'>
-    <div className="header"><h1>About</h1></div>
+    <div className="header"><h1>About 🔍</h1></div>
     <div className="about-me">
       <div className="paragraph">
         <div className="paragraph-inner">

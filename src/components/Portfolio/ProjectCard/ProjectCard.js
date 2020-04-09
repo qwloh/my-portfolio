@@ -13,8 +13,10 @@ const ProjectCard = (props) => {
   //jsx
   return (<div className='project-card'>
     <div className="thumbnail">
-      {props.app}
-      <Svg name='expand' class='expand' width='20' height='20' viewBox='0 0 36 36' stroke='#7f8c8d' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' popUp={props.popUp} id={props.title}/>
+      <div className="thumbnail-inner">
+        {props.app}
+      </div>
+      <Svg name='expand' class='expand' width='16' height='16' viewBox='0 0 36 36' stroke='#7f8c8d' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' popUp={props.popUp} id={props.title}/>
     </div>
     <div className="description">
       <div className='project-title'>

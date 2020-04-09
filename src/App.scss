@@ -7,11 +7,11 @@
   display:grid;
 
   @include for-phone-only {
-    grid-template-columns:minmax(440px, 1fr);
+    grid-template-columns:minmax(380px, 1fr);
     overflow-y:scroll;
   }
   @include for-tablet-landscape-up {
-    grid-template-columns:minmax(440px, 1fr) 2fr;
+    grid-template-columns:minmax(380px, 1fr) 2fr;
   }
 
   //popUp
@@ -39,7 +39,7 @@
 
   //fixed side panel
   #my-info-wrapper{
-    padding-top:200px;
+    padding-top:150px;
     height:100vh;
     box-sizing:border-box;
     display:flex;
@@ -65,10 +65,17 @@
       min-height:100vh;
       display:flex;
       flex-direction:column;
+      justify-content: center;
+      box-sizing:border-box;
+      @include for-phone-only{
+        padding:0 20px;
+      }
+      @include for-tablet-portrait-up{
+        padding:0 50px;
+      }
 
       .header{
-        height:80px;
-        padding-top:50px;
+        padding:70px 0 30px 0;
         width:100%;
         flex-grow:0;
         display:flex;
@@ -77,10 +84,9 @@
         justify-content: flex-start;
 
         h1{
-          padding:0 50px;
           font-family: 'Source Sans Pro', sans-serif;
           font-weight:600;
-          font-size:36px;
+          font-size:24px;
         }
       }
     }

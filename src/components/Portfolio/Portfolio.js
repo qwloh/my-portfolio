@@ -13,7 +13,7 @@ const Portfolio = (props) => {
 
   return(
     <div id='portfolio' className='info-section'>
-      <div className="header"><h1 id='portfolio-header'>Portfolio</h1></div>
+      <div className="header"><h1 id='portfolio-header'>Portfolio 💼</h1></div>
       <div id="project-area">
         {cards}
       </div>

@@ -6,8 +6,9 @@
 }
 
 .about-me{
-  font-family:'Montserrat', sans-serif;
-  flex-grow:1;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight:300;
+  letter-spacing:0.5px;
   display:flex;
   flex-direction:column;
 
@@ -16,11 +17,13 @@
       width:60%;
     }
     flex-grow:1;
-    padding:10px 50px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding-bottom:10px;
     p{
-      font-size: 18px;
-      line-height:28px;
-      margin:40px 0;
+      line-height:24px;
+      margin-bottom:20px;
     }
   }
 
@@ -29,32 +32,31 @@
     flex-direction:row;
     flex-wrap:wrap;
     #cause, #fan-of, #enjoy{
-      min-width:150px;
+      min-width:100px;
     }
     p{
-      font-size:18px;
-      padding:5px 50px;
+      padding:5px 50px 5px 0;
     }
     p.extra-label{
-      font-size:16px;
+      font-size:14px;
+      padding-top:20px;
       color:#34495e;
     }
   }
 
   #resume {
     flex-grow:0;
-    height:200px;
     display:flex;
     flex-direction:row;
     align-items:center;
-    padding:0 50px;
+    padding:50px 0;
 
     button {
       background:#3498db;
       color:#fff;
-      padding:15px 20px;
-      font-size:18px;
-      border-radius:10px;
+      padding:10px 20px;
+      font-size:16px;
+      border-radius:8px;
       transition:all 0.3s;
       &:hover{
         background:#2980b9;
