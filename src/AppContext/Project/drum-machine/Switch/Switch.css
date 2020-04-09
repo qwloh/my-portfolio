@@ -1,0 +1,43 @@
+#switch{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  position:relative;
+}
+
+#switch-icon {
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#switch-icon p{
+  font-size:8px;
+}
+
+#switch input{
+  -webkit-appearance:none;
+  width:40px;
+  margin:0;
+}
+
+#switch input::-webkit-slider-runnable-track{
+  -webkit-appearance:none;
+  height:16px;
+  border-radius:12px;
+  background:var(--light);
+}
+
+#switch input::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  background:var(--dark);
+  margin:2px;
+  transition: left 2s;
+}

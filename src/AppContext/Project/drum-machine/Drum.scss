@@ -1,0 +1,56 @@
+input[type=range]{
+  transform:translateX(-50%) rotateZ(270deg);
+  transform-origin: center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:9999;
+}
+
+#drum-machine-wrapper{
+  width:80%;
+  height:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  position:relative;
+}
+
+#drum-machine{
+  height:100%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow:hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.enable{
+  --light:pink;
+  --dark:#ED4C67;
+}
+
+.enable input, .enable .drum-pad{
+  cursor:pointer;
+}
+
+.disable{
+  --light:#ecf0f1;
+  --dark:#7f8c8d;
+}
+
+#drum-machine:focus, input:focus{
+  outline:none;
+}
+
+#meta{
+  grid-column:2/3;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(40px,60px));
+  grid-template-rows: 3fr 1fr;
+  padding:30px 15px;
+}

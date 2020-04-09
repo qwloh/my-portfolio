@@ -1,0 +1,44 @@
+//nested in: #my-info-wrapper in app.scss
+
+#my-info{
+  h1{
+    font-family:'Rubik', sans-serif;
+    font-size:72px;
+    font-weight:500;
+    margin:10px 0;
+    transition:all 1s;
+
+    span{
+      font-size:64px;
+    }
+  }
+
+  .description-text p{
+    font-family:'Montserrat', sans-serif;
+    font-size:21px;
+    margin: 30px 0;
+  }
+
+  .info-text{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin:10px 0;
+
+    p{
+      font-family:'Montserrat', sans-serif;
+      padding:0 20px;
+      margin:15px 0;
+    }
+  }
+
+  #social{
+    margin-top:40px;
+    display:flex;
+    justify-content: space-between;
+
+    a{
+      padding-right:20px;
+    }
+  }
+}

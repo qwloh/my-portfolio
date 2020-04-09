@@ -1,0 +1,19 @@
+@import 'media-mixins';
+
+#portfolio{
+  padding-top:60px;
+  padding-bottom:60px;
+  z-index:1;
+}
+
+#project-area{
+  display:grid;
+  @include for-phone-only{
+    grid-template-columns:minmax(440px, 1fr);
+  }
+  @include for-desktop-up{
+    grid-template-columns:repeat(2, minmax(440px, 1fr));
+  }
+  padding:10px;
+  margin-bottom: 80px;
+}

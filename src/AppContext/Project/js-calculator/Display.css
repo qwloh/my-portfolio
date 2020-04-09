@@ -1,0 +1,33 @@
+#screen{
+    height:30%;
+    display:flex;
+    flex-direction:column;
+    font-weight:300;
+}
+
+#log{
+  height:25%;
+  font-size:14px; /*abs value -fixed*/
+  letter-spacing:1px; /*abs value -fixed*/
+}
+
+#display{
+  height:75%;
+  font-weight:400;
+  font-size:21px; /*abs value -f*/
+}
+
+#log, #display {
+    display:flex;
+    width:98%;
+    margin:1%;
+    align-items: center;
+    border-radius: 3px; /*abs value -f*/
+    background:#2f3640;
+}
+
+#log p, #display p{
+  width:100%;
+  padding: 0 10px; /*abs value -f*/
+  text-align: right;
+}

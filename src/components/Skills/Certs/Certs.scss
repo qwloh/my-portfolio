@@ -1,0 +1,31 @@
+.cert-card{
+  border-radius:10px;
+  display:flex;
+  overflow:hidden;
+  margin-bottom:20px;
+
+  .institution{
+    width:20%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .cert-info{
+    width:80%;
+    box-sizing:border-box;
+    padding:20px;
+
+    h1{
+      font-family:'Rubik', sans-serif;
+      font-size:24px;
+      font-weight:400;
+      margin: 0 0 10px 0;
+    }
+
+    a{
+      text-decoration:none;
+      font-size:18px;
+    }
+  }
+}

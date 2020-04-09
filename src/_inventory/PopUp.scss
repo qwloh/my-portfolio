@@ -1,0 +1,132 @@
+@import 'media-mixins';
+
+#window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+}
+
+#popup-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1400px;
+  height: 80%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px #bdc3c7;
+  opacity: 1;
+  display: grid;
+
+  //styles to be included in for-phone-only and for-tablet-portrait-up
+  @mixin popUpSetUp() {
+    grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+
+    #popup-app {
+      order: 2;
+    }
+
+    #detail {
+      order: 1;
+    }
+  }
+
+  @include for-phone-only {
+    @include popUpSetUp();
+  }
+
+  @include for-tablet-portrait-up {
+    @include popUpSetUp();
+  }
+
+  //styles for tablet-landscape-up
+  @include for-tablet-landscape-up {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: 1fr;
+
+    #popup-app {
+      order: 1;
+    }
+
+    #detail {
+      order: 2;
+      border-left: 1px solid #ecf0f1;
+      padding: 50px;
+
+      #detail-inner {
+        position: relative;
+        height: 100%;
+
+        //general
+        h1 {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          margin: 0;
+          font-size: 32px;
+        }
+
+        h2, p, li {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          line-height:24px;
+        }
+
+        .popup-fcc {
+          font-size: 14px;
+          line-height: 21px;
+          padding-bottom: 20px;
+        }
+
+        //description & features
+        .description-div {
+          padding: 10px 0;
+
+          .description-title {
+            font-size: 16px;
+            padding-bottom: 10px;
+          }
+
+          li {
+            padding: 10px 0;
+          }
+        }
+
+        //github repo and page
+        .project-source {
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          bottom: 0px;
+
+          p {
+            flex-grow: 1;
+            padding-right: 20px;
+          }
+        }
+      }
+
+      //close button
+      .close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: #fff;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+#popup-app {
+  position: relative;
+}

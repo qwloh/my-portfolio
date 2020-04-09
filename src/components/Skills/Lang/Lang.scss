@@ -1,0 +1,68 @@
+@import 'media-mixins';
+
+.skills-lang{
+  margin:10px 0;
+  padding:20px;
+
+  table{
+    width:100%;
+    table-layout:fixed;
+
+    tr{
+
+      //langugage name
+      code{
+        line-height:32px;
+        padding:2px 8px;
+        border-radius:4px;
+        font-size:24px;
+      }
+
+      //skill level indicator
+      .skills-lvl{
+        height:30px;
+        width:50%;
+
+        div {
+          background:#ecf0f1;
+          width:100%;
+          border-radius:3px;
+          overflow:hidden;
+          margin:auto 0;
+          height:10px;
+          position:relative; //for positioning color strips
+
+          $datas:(
+             "html":(#f3a683 10),
+             "css":(#778beb 10),
+             "sass":(#cf6a87 8),
+             "javascript":(#f5cd79 10),
+             "react":(#63cdda 9),
+             "redux":(#a55eea 7),
+             "webpack":(#45aaf2 7),
+             "hooks":(#f7d794 0)); //for coloring strips
+
+          @each $lang, $data in $datas {
+            $bg:nth($data, 1);
+            $width:nth($data, 2)*10;
+            $dur:nth($data,2)/10;
+            &.#{$lang}-level::before{
+              content:'';
+              position:absolute;
+              top:0;
+              left:0;
+              width:0%;
+              height:100%;
+              background:$bg;
+              transition:#{$dur}s;
+              transform-origin:left;
+            }
+            &.#{$lang}-level.loaded::before{
+              width:percentage($width/100);
+            }
+          }
+        }
+      }
+    }
+  }
+}

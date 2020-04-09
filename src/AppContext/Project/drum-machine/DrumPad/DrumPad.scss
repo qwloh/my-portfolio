@@ -1,0 +1,68 @@
+#pad{
+  grid-column:1/2;
+  display:grid;
+  grid-template-columns: repeat(3, 60px);
+  justify-content: center;
+  align-items: center;
+  padding:15px;
+}
+
+.grid-item{
+  position:relative;
+}
+
+.grid-item svg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.drum-pad{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:45px;
+  height:45px;
+  background:var(--light);
+  border-radius:50%;
+  display:flex;
+  align-items: center;
+}
+
+.drum-pad:focus{
+  outline:none;
+}
+
+.drum-pad p{
+  margin: 0 auto;
+  font-size:14px;
+  cursor:default;
+  color:var(--dark);
+}
+
+.animation-inner{
+  animation:clicked 1s;
+  animation-fill-mode:backwards;
+}
+
+.animation-outer{
+  animation:clicked 1s 0.2s;
+  animation-fill-mode:backwards;
+}
+
+@keyframes clicked {
+  0%{
+    opacity:1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  10%{
+    opacity:0.6;
+    transform: translate(-50%, -50%) scale(2);
+  }
+  100%{
+    opacity:0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}

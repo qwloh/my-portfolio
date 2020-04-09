@@ -1,0 +1,64 @@
+@import 'media-mixins';
+
+#about{
+  box-shadow:0 0px 10px #eccc68;
+  background:#fff;
+}
+
+.about-me{
+  font-family:'Montserrat', sans-serif;
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+
+  .paragraph{
+    @include for-desktop-up{
+      width:60%;
+    }
+    flex-grow:1;
+    padding:10px 50px;
+    p{
+      font-size: 18px;
+      line-height:28px;
+      margin:40px 0;
+    }
+  }
+
+  .extra{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    #cause, #fan-of, #enjoy{
+      min-width:150px;
+    }
+    p{
+      font-size:18px;
+      padding:5px 50px;
+    }
+    p.extra-label{
+      font-size:16px;
+      color:#34495e;
+    }
+  }
+
+  #resume {
+    flex-grow:0;
+    height:200px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding:0 50px;
+
+    button {
+      background:#3498db;
+      color:#fff;
+      padding:15px 20px;
+      font-size:18px;
+      border-radius:10px;
+      transition:all 0.3s;
+      &:hover{
+        background:#2980b9;
+      }
+    }
+  }
+}

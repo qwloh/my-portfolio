@@ -1,0 +1,35 @@
+#volume{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  position:relative;
+}
+
+#volume-icon {
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+#volume input{
+  -webkit-appearance:none;
+  width:65px;
+  margin:0;
+}
+
+#volume input::-webkit-slider-runnable-track{
+  -webkit-appearance:none;
+  height:2px;
+  border-radius:1px;
+  background:var(--light);
+}
+
+#volume input::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--dark);
+  margin:-4px;
+}

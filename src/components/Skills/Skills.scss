@@ -1,0 +1,42 @@
+@import 'media-mixins';
+
+#skills{
+  box-shadow:0 0 10px #eccc68;
+  background:#fff;
+  @include for-tablet-landscape-up{
+    padding:30px;
+    box-sizing:border-box;
+    z-index:2;
+  }
+}
+
+#skills-experience-outer-wrapper{
+  flex-grow:1;
+  position:relative;
+}
+
+#skills-experience-wrapper{
+  @include for-tablet-landscape-up{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  box-sizing:border-box;
+}
+
+#lang-skills, #experience{
+  flex-basis:300px;
+  flex-grow:1;
+  padding:30px;
+  font-family:'Montserrat', sans-serif;
+  .skills-experience-label{
+    margin:0 20px 50px 20px;
+    font-size:18px;
+    letter-spacing:1px;
+    color:#34495e;
+    font-weight:400;
+  }
+}

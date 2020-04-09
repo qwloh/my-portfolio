@@ -1,0 +1,56 @@
+.project-card{
+  height:500px;
+  background: #fff;
+  margin:20px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.25s;
+  box-shadow:0px 0 20px #eccc68;
+  &:hover{
+    cursor:pointer;
+  }
+  .thumbnail{
+    flex-grow:5;
+    position:relative;
+    .expand{
+      position:absolute;
+      top:25px;
+      left:30px;
+    }
+  }
+  .description{
+    flex-grow:1;
+    border-top:1px solid #ecf0f1;
+    display:flex;
+    flex-direction:row;
+
+    .project-title{
+      width:60%;
+      position:relative;
+
+      p{
+        margin:0;
+        font-size:18px;
+        position:absolute;
+        bottom:20px;
+        left:15px;
+      }
+    }
+    .tags{
+      width:40%;
+      position:relative;
+
+      .tags-container{
+        position:absolute;
+        right:15px;
+        bottom:20px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

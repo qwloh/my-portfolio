@@ -1,0 +1,44 @@
+.settings{
+  width:50%;
+  display:grid;
+  grid-template-columns:3fr 2fr 1fr;
+  align-items:center;
+}
+
+.settings .sess p{
+  padding-left:10px;
+  font-size:8px;
+  color:var(--dg);
+}
+
+.settings .break p{
+  padding-left:5px;
+  font-size:8px;
+  color:var(--dg);
+}
+
+.settings .length p{
+  margin: 0 auto;
+  font-size:12px;
+  padding:5px;
+  color:var(--dg);
+}
+
+.setup{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-right:5px;
+}
+
+.setup svg{
+  display:block;
+}
+
+.settings-button{
+  padding:2px 0;
+}
+
+button.settings-button:disabled{
+  cursor:default;
+}

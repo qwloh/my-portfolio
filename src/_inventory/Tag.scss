@@ -1,0 +1,18 @@
+$bgs:(
+"html":#f3a683,
+"css":#778beb,
+"sass":#cf6a87,
+"javascript":#f5cd79,
+"react":#63cdda,
+"redux":#a55eea,
+"webpack":#45aaf2,
+"hooks":#f7d794);
+
+@each $lang, $bg in $bgs {
+  .#{$lang}{
+    padding:2px 5px;
+    margin:2px;
+    border-radius:2px;
+    background:$bg;
+  }
+}

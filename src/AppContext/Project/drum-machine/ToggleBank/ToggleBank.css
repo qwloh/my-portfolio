@@ -1,0 +1,40 @@
+#toggle-bank{
+  position:relative;
+}
+
+#bank-icon {
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#bank-icon p{
+  font-size:8px;
+}
+
+#toggle-bank input{
+  -webkit-appearance:none;
+  width:40px;
+  margin:0;
+}
+
+#toggle-bank input::-webkit-slider-runnable-track{
+  -webkit-appearance:none;
+  height:16px;
+  border-radius:12px;
+  background:var(--light);
+}
+
+#toggle-bank input::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  background:var(--dark);
+  margin:2px;
+  transition: left 2s;
+}
