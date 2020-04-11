@@ -14,12 +14,17 @@
 
 #bank-icon p{
   font-size:8px;
+  padding-top:10px;
 }
 
 #toggle-bank input{
   -webkit-appearance:none;
   width:40px;
   margin:0;
+}
+
+#toggle-bank input:focus{
+  outline:none;
 }
 
 #toggle-bank input::-webkit-slider-runnable-track{

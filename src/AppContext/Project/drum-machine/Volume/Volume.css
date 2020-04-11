@@ -18,6 +18,10 @@
   margin:0;
 }
 
+#volume input:focus{
+  outline:none;
+}
+
 #volume input::-webkit-slider-runnable-track{
   -webkit-appearance:none;
   height:2px;

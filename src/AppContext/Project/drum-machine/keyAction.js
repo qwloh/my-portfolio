@@ -16,7 +16,7 @@ export const keyAction = (id, volume, mute, toggleBank, animState) => {
   }else{
   switch(id){
     //modify toggleBank
-    case 'Tab':
+    case 'Shift':
       document.getElementById('drum-display').innerHTML = toggleBank ? 'Smooth Piano Kit' : 'Heater Kit';
       return ({toggleBank:!toggleBank, volume:volume, mute:mute, animState:animState});
 

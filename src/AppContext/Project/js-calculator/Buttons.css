@@ -20,8 +20,8 @@ button {
 }
 
 .button-pad button:hover{
-  top:1px; /*abs value -f*/
-  left:1px; /*abs value -f*/
+  top:-2px; /*abs value -f*/
+  left:-2px; /*abs value -f*/
 }
 
 .num-pad {

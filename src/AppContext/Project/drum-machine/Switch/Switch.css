@@ -17,6 +17,7 @@
 
 #switch-icon p{
   font-size:8px;
+  padding-top:10px;
 }
 
 #switch input{
@@ -25,11 +26,15 @@
   margin:0;
 }
 
+#switch input:focus{
+  outline:none;
+}
+
 #switch input::-webkit-slider-runnable-track{
   -webkit-appearance:none;
   height:16px;
   border-radius:12px;
-  background:var(--light);
+  background:pink;
 }
 
 #switch input::-webkit-slider-thumb{
@@ -37,7 +42,7 @@
   width:20px;
   height:12px;
   border-radius:10px;
-  background:var(--dark);
+  background:#ED4C67;
   margin:2px;
   transition: left 2s;
 }

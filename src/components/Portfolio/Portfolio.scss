@@ -1,4 +1,4 @@
-@import 'media-mixins';
+@import 'media-mixins'; //1
 
 #portfolio{
   padding-top:60px;
@@ -8,10 +8,8 @@
 
 #project-area{
   display:grid;
-  @include for-phone-only{
-    grid-template-columns:minmax(380px, 1fr);
-  }
-  @include for-desktop-up{
+  grid-template-columns:minmax(380px, 1fr);
+  @include media-queries($l){
     grid-template-columns:repeat(2, minmax(380px, 1fr));
   }
   margin:-20px -20px 80px -20px;

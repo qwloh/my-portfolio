@@ -6,7 +6,7 @@ $bgs:(
 "react":#63cdda,
 "redux":#a55eea,
 "webpack":#45aaf2,
-"hooks":#f7d794);
+"context":#f7d794);
 
 @each $lang, $bg in $bgs {
   .#{$lang}{

@@ -18,7 +18,7 @@ const Volume = () =>{
   return(
     <div id="volume">
       <div id="volume-icon">
-      <Svg name='volume' width='14' height='14' viewBox='0 0 52 52' fill={mute?'#ecf0f1':'pink'} stroke={mute?'#ecf0f1':'pink'} strokeWidth='1.5'/>
+      <Svg name='volume' width='14' height='14' viewBox='0 0 52 52' fill={mute?'#ecf0f1':'pink'} stroke={mute?'#7f8c8d':'#ED4C67'} strokeWidth='1.5'/>
       </div>
       <input type="range" min="0" max="1" value={volume} step="0.05" onChange={volumeChange}/>
     </div>

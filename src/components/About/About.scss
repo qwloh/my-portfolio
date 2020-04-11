@@ -1,4 +1,4 @@
-@import 'media-mixins';
+@import 'media-mixins'; //1
 
 #about{
   box-shadow:0 0px 10px #eccc68;
@@ -13,7 +13,7 @@
   flex-direction:column;
 
   .paragraph{
-    @include for-desktop-up{
+    @include media-queries($l){
       width:60%;
     }
     flex-grow:1;
