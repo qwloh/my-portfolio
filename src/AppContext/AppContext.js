@@ -51,7 +51,7 @@ const AppContextProvider = (props) => {
       moreInfo: {
         description: 'A simple drum pad',
         features: [
-          'Keystroke control',
+          'Keystroke control - Click anywhere on the app once to enable',
           'Toggle between banks of sound effect'
         ],
         pageLink: 'https://qwen-3108.github.io/drum-machine/',

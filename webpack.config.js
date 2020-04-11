@@ -44,12 +44,12 @@ module.exports = {
         use:['style-loader', 'css-loader']
       },
       {
-        test:/\.mp3$/,
+        test:/\.(mp3|pdf|docx?)$/i,
         use:{
           loader:'file-loader',
           options:{
             name:'[name].[ext]',
-            outputPath:'assets/audio/'
+            outputPath:'assets/'
           }
         }
       }

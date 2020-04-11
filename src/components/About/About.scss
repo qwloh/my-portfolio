@@ -1,8 +1,8 @@
 @import 'media-mixins'; //1
 
 #about{
-  box-shadow:0 0px 10px #eccc68;
-  background:#fff;
+  // box-shadow:0 -10px 10px -10px var(--shadow);
+  border-top:1px solid #ecf0f1;
 }
 
 .about-me{
@@ -50,16 +50,53 @@
     flex-direction:row;
     align-items:center;
     padding:50px 0;
-
-    button {
-      background:#3498db;
+    font-weight:400;
+    &>p{
+      padding-right:20px;
+    }
+    #view{
+      padding-right:20px;
+    }
+    #download-button{
+      padding:10px 0;
+      background:#6c5ce7;
+      border-radius:5px;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      align-items: center;
+      position:relative;
       color:#fff;
-      padding:10px 20px;
-      font-size:16px;
-      border-radius:8px;
-      transition:all 0.3s;
       &:hover{
-        background:#2980b9;
+        background: #5f27cd;
+      }
+      &>p{
+        padding:0 20px;
+        cursor:default;
+      }
+      #dropdown-arrow{
+        padding-right:20px;
+        cursor:pointer;
+      }
+      #download-dropdown{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        padding:10px 0;
+        box-sizing:border-box;
+        border:1px solid #ecf0f1;
+        a{
+          display:block;
+          width:100%;
+          text-decoration:none;
+          color:black;
+          padding:10px 20px;
+          box-sizing:border-box;
+          &:hover{
+            background:#ecf0f1;
+          }
+        }
       }
     }
   }

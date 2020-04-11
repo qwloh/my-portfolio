@@ -66,8 +66,8 @@ const PopUp = (props) => {
               <p><a href={project.moreInfo.pageLink} target='_blank'>Github page</a> | <a href={project.moreInfo.repoLink}  target='_blank'>Github repo</a></p>
             </div>
           </div>
-          <Svg name='close' className='close' width='16' height='16' viewBox='0 0 329.26933 329' fill='#6c5ce7' closePop={props.closePop}/>
         </div>
+        <Svg name='close' className='close' width='16' height='16' viewBox='0 0 329.26933 329' fill='#6c5ce7' closePop={props.closePop}/>
       </div>
 
     </div>

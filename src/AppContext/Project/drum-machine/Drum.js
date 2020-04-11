@@ -23,6 +23,7 @@ const Drum = (props) => {
   const keyHandler =(e)=> {
     let id = e.key;
     let newState = keyAction(id, volume, mute, toggleBank, animState);
+    e.preventDefault();
     setState({...newState, ...state});
   }
 

@@ -10,26 +10,30 @@ import './App.scss';
 
 const App = () => {
 
-  const [isPop, setPop] = useState(false);
+  //extract project data to fill in pop up
   const {projects, newProject} = useContext(AppContext);
+
+  //popup controll
+  const [isPop, setPop] = useState(false);
   const pop =(id) =>{
     setPop(id);
   }
   const closePop = () => {
     setPop(false);
   }
+
   return (
     <div id="app">
       <CSSTransition in={!!isPop} unmountOnExit timeout={500} classNames={'popUp'}>
         <PopUp closePop={closePop} projectName={isPop}/>
       </CSSTransition>
       <div id='my-info-wrapper'>
-        <MyInfo/>
+        <MyInfo />
       </div>
       <div id="more-info-wrapper">
-        <Skills/>
-        <Portfolio popUp={pop}/>
-        <About/>
+        <Skills />
+        <Portfolio popUp={pop} />
+        <About />
       </div>
     </div>);
 

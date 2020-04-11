@@ -1,9 +1,31 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Svg from './Svg.js';
 import './MyInfo.scss';
 
 const MyInfo = (props) => {
-  return (<div id='my-info'>
+  const myInfo = useRef();
+  const fadeInObserver = new IntersectionObserver(
+  (entries, observer)=>{
+    let offset =
+    entries.forEach(entry=>{
+      if(entry.intersectionRatio > 0){
+        console.log(entry.target);
+        entry.target.classList.remove('init');
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    }
+    );
+  },
+  {
+      root:null,
+      rootMargin:'0px',
+      threshold:0.4
+  }
+  );
+  useEffect(()=>fadeInObserver.observe(myInfo.current));
+
+  return (<div id='my-info' className='init' ref={myInfo}>
     <h1>Qiao Wen,<br/>
       <span>Loh</span>
     </h1>
@@ -22,7 +44,7 @@ const MyInfo = (props) => {
     <div id='social'>
       <a href='https://www.linkedin.com/in/qwenloh/' target='_blank'><Svg name='linkedIn' viewBox='0 0 512 512' width='30' height='30' fill='#2f3640'/></a>
       <a href='https://github.com/qwen-3108' target='_blank'><Svg name='github' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
-      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://codepen.io/qwenloh' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
     </div>
   </div>);
 }

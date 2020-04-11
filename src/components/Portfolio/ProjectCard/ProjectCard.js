@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Tag from 'Inv/Tag';
 import './ProjectCard.scss';
 import Svg from './Svg';
@@ -17,8 +17,31 @@ const ProjectCard = (props) => {
   //trigger hover animation
   const [isHover, setHover] = useState(false);
 
+  //entrance animation
+  const card = useRef();
+  const fadeInObserver = new IntersectionObserver(
+    (entries, observer)=>{
+      let offset =
+      entries.forEach(entry=>{
+        if(entry.intersectionRatio > 0){
+          console.log(entry.target);
+          entry.target.classList.remove('init');
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      }
+    );
+  },
+  {
+    root:null,
+    rootMargin:'0px',
+    threshold:0.4
+  }
+);
+  useEffect(()=>{fadeInObserver.observe(card.current);});
+
   //jsx
-  return (<div className='project-card' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+  return (<div className='project-card init' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} ref={card}>
     <div className="thumbnail">
       { isHover &&
         <div className="thumbnail-anim">

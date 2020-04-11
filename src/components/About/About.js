@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Svg from './Svg';
+import Resume from './Resume.pdf';
+import ResumeDoc from './Resume.docx';
 import './About.scss';
 
 const About = (props) => {
+
+  //resume button dropdown
+  const [isDrop, setDrop] = useState(false);
+
+  //entrance animation
+  const section = useRef();
+  const fadeInObserver = new IntersectionObserver(
+  (entries, observer)=>{
+    let offset =
+    entries.forEach(entry=>{
+      if(entry.intersectionRatio > 0){
+        console.log(entry.target);
+        entry.target.classList.remove('init');
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    }
+    );
+  },
+  {
+      root:null,
+      rootMargin:'0px',
+      threshold:0.4
+  }
+  );
+  useEffect(()=>fadeInObserver.observe(section.current));
+
   return(
-    <div id='about' className='info-section'>
+    <div id='about' className='info-section init' ref={section}>
     <div className="header"><h1>About 🔍</h1></div>
     <div className="about-me">
       <div className="paragraph">
@@ -29,7 +59,22 @@ const About = (props) => {
         </div>
       </div>
       <div id="resume">
-        <button>PDF Resume</button>
+        <p>Resume</p>
+        <div id="view">
+          <a href={Resume} target='_blank'><Svg name='view' width='20' height='20' viewBox='0 0 512 512' fill='#6c5ce7' /></a>
+        </div>
+        <div id='download-button' onMouseLeave={()=>setDrop(false)}>
+          <p>Download</p>
+          <div id="dropdown-arrow" onClick={()=>setDrop(true)} >
+            <Svg name='down-arrow' width='10' height='10' viewBox='0 0 213.333 213.333' fill='#fff' />
+          </div>
+          { isDrop &&
+            <div id='download-dropdown'>
+              <a href={ResumeDoc} download>Word Doc</a>
+              <a href={Resume} download>PDF</a>
+            </div>
+          }
+        </div>
       </div>
     </div>
     </div>
