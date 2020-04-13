@@ -40,7 +40,7 @@ const About = (props) => {
         <div className="paragraph-inner">
           <p>I studied materials engineering and worked as a researcher at National University of Singapore before discovering my passion in web technology.</p>
           <p>To me, web development is exciting because I enjoy building tools that people use and delivering thoughtful user experience. </p>
-          <p>Currently, I am mainly interested in data visualization and the accessibility aspect of the web.</p>
+          <p>Currently, I am actively learning about the Jest testing framework so that I can take my web development skills to the next level.</p>
           <p>Let's get in touch if you have a project to collaborate!</p>
         </div>
       </div>
