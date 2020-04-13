@@ -12,7 +12,7 @@ const Certs = (props) => {
       <div className="cert-info">
         <div><h1>{props.title}</h1></div>
         <div>{props.description}</div>
-        <div><a href={certLink} target='_blank'>Link to certificate</a></div>
+        <div><a href={certLink} title={props.title} target='_blank'>Link to certificate</a></div>
       </div>
     </div>);
 }

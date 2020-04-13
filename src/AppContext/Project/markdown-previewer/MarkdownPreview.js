@@ -31,15 +31,16 @@ class MarkdownPreview extends Component {
     this.setState({isLight:!this.state.isLight});
   }
 
-  move (e, x, currentGrid) {
+  move (e) {
      let newGrid = (e.clientX-this.state.mousedownX+this.state.currentGrid);
-     if(newGrid>20&&newGrid<(this.state.cardWidth-20)){
+     if(newGrid>150&&newGrid<(this.state.cardWidth-20)){
        newGrid = newGrid+'px minmax(0, auto)';
      }
     document.querySelector('#page').style.gridTemplateColumns = newGrid;
   }
 
   resize (e) {
+    console.log('resize triggered');
     let page = document.querySelector('#page');
     let currentGrid = getComputedStyle(page).gridTemplateColumns;
     currentGrid = Number(currentGrid.match(/\d+/));

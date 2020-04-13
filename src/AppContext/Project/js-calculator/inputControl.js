@@ -28,8 +28,16 @@ const inputControl = (numStr, state) => {
 
     case '0': //Previous input was 0
       if(zeroRegex.test(inp)||inp==='0'){
-        input = (numStr==='0')? inp:inp.slice(0, inp[inp.length-1])+numStr;
-        output = (numStr==='0')? out:out.slice(0, out[out.length-1])+numStr;
+        if(numStr==='0'){
+          input = inp;
+          output = out;
+        }else if(numStr==='.'){
+          input = inp+numStr;
+          output = out+numStr;
+        }else{
+          input = inp.slice(0, inp.length-1)+numStr;
+          output = out.slice(0, out.length-1)+numStr;
+        }
       }else{
         input = inp+numStr;
         output = out+numStr;

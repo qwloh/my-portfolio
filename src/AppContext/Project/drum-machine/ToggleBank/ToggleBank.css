@@ -43,3 +43,34 @@
   margin:2px;
   transition: left 2s;
 }
+
+#toggle-bank input::-moz-range-track{
+  height:16px;
+  border-radius:12px;
+  background:var(--light);
+}
+
+#toggle-bank input::-moz-range-thumb{
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  border:none;
+  background:var(--dark);
+  margin:2px;
+  transition: left 2s;
+}
+
+#toggle-bank input::-ms-track{
+  height:16px;
+  border-radius:12px;
+  background:pink;
+}
+
+#toggle-bank input::-ms-thumb{
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  background:#ED4C67;
+  margin:2px;
+  transition: left 2s;
+}

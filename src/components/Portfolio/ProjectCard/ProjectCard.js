@@ -24,7 +24,7 @@ const ProjectCard = (props) => {
       let offset =
       entries.forEach(entry=>{
         if(entry.intersectionRatio > 0){
-          console.log(entry.target);
+          // console.log('project card observer triggered', entry.target);
           entry.target.classList.remove('init');
           entry.target.classList.add('fade-in');
           observer.unobserve(entry.target);

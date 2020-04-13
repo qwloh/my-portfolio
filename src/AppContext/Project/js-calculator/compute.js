@@ -1,8 +1,8 @@
 /* Computing function */
 
 const compute = (str) => {
-  let numRegex = /((?<!\d)[-]?)[0-9.]+/g;
-  let opRegex = /(?<=\d)[+/*-]+(?=.)/g;
+  let numRegex = /(?:[+/*-]-)?[0-9.]+/g;
+  let opRegex = /[\d.][+/*-]+(?=\d)/g;
   let numArr = str.match(numRegex);
   let opArr = str.match(opRegex);
 
@@ -12,24 +12,35 @@ const compute = (str) => {
 
   } else {
 
-    //cleaning repeating operators
+    //cleaning numArr and opArr: removing prepending character & choosing the right operator
     let cleanedArr = [];
     for (let i = 0; i < opArr.length; i++) {
 
-      cleanedArr.push(numArr[i]);
+      let tempNum = numArr[i];
+      if(tempNum.search(/[+/*-]/)>0){
+        tempNum = tempNum.slice(1);
+      }
+      cleanedArr.push(tempNum);
+
       let tempOp = opArr[i];
-      if(opArr[i].length>1){
-        tempOp = opArr[i][opArr[i].length-1]==='-'
-          ? opArr[i][opArr[i].length-2]
-          : opArr[i][opArr[i].length-1];
+      tempOp = tempOp.slice(1);
+      if(tempOp.length>1){
+        tempOp = tempOp[tempOp.length-1]==='-'
+          ? tempOp[tempOp.length-2]
+          : tempOp[tempOp.length-1];
       }
       cleanedArr.push(tempOp);
-      console.log('tempOp:', tempOp);
     }
-    cleanedArr.push(numArr[numArr.length - 1]);
-    console.log('numArr:', numArr);
-    console.log('opArr:', opArr);
-    console.log('cleanedArr:', cleanedArr);
+
+    //pushing in the last number
+    let tempNum = numArr[numArr.length - 1];
+    if(tempNum.search(/[+/*-]/)>=0){
+      tempNum = tempNum.slice(1);
+    }
+    cleanedArr.push(tempNum);
+    // console.log('numArr:', numArr);
+    // console.log('opArr:', opArr);
+    // console.log('cleanedArr:', cleanedArr);
 
     //multiplication, division
     const OP = [{

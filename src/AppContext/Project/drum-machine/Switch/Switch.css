@@ -46,3 +46,35 @@
   margin:2px;
   transition: left 2s;
 }
+
+#switch input::-moz-range-track{
+  height:16px;
+  border-radius:12px;
+  background:pink;
+}
+
+#switch input::-moz-range-thumb{
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  border:none;
+  background:#ED4C67;
+  margin:2px;
+  transition: left 2s;
+}
+
+
+#switch input::-ms-track{
+  height:16px;
+  border-radius:12px;
+  background:pink;
+}
+
+#switch input::-ms-thumb{
+  width:20px;
+  height:12px;
+  border-radius:10px;
+  background:#ED4C67;
+  margin:2px;
+  transition: left 2s;
+}

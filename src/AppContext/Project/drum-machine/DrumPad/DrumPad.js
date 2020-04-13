@@ -26,12 +26,12 @@ const DrumPad = () =>{
   }
 
   const animResetInner = (e) => {
-      console.log('clearInner', e.target.id);
+      // console.log('clearInner', e.target.id);
       document.getElementById(e.target.id).classList.remove('animation-inner');
   }
 
   const animResetOuter = (e) => {
-      console.log('clearInner', e.target.id);
+      // console.log('clearInner', e.target.id);
       document.getElementById(e.target.id).classList.remove('animation-outer');
   }
 

@@ -19,6 +19,10 @@ button {
   position:relative;
 }
 
+.button-pad button:focus{
+  outline:none;
+}
+
 .button-pad button:hover{
   top:-2px; /*abs value -f*/
   left:-2px; /*abs value -f*/

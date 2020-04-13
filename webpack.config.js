@@ -7,7 +7,7 @@ module.exports = {
     path:path.resolve(__dirname, 'docs'),
   },
   devServer:{
-    contentBase:'./dist',
+    contentBase:'./docs',
     stats:{
       assets:true
     }

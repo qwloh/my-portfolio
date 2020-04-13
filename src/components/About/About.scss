@@ -3,12 +3,21 @@
 #about{
   // box-shadow:0 -10px 10px -10px var(--shadow);
   border-top:1px solid #ecf0f1;
-}
-
-.about-me{
   font-family:'Source Sans Pro', sans-serif;
   font-weight:300;
   letter-spacing:0.5px;
+  #icon-credit{
+    font-size:12px;
+    padding-bottom:20px;
+    color:#7f8fa6;
+    a{
+      text-decoration:none;
+      color: #718093;
+    }
+  }
+}
+
+.about-me{
   display:flex;
   flex-direction:column;
 
@@ -86,6 +95,7 @@
         padding:10px 0;
         box-sizing:border-box;
         border:1px solid #ecf0f1;
+        background:#fff;
         a{
           display:block;
           width:100%;

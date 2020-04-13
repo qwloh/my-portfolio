@@ -42,9 +42,9 @@ const MyInfo = (props) => {
         loh.qwen@gmail.com</p>
     </div>
     <div id='social'>
-      <a href='https://www.linkedin.com/in/qwenloh/' target='_blank'><Svg name='linkedIn' viewBox='0 0 512 512' width='30' height='30' fill='#2f3640'/></a>
-      <a href='https://github.com/qwen-3108' target='_blank'><Svg name='github' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
-      <a href='https://codepen.io/qwenloh' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://www.linkedin.com/in/qwenloh/' title='LinkedIn' target='_blank'><Svg name='linkedIn' viewBox='0 0 512 512' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://github.com/qwen-3108' title='Github' target='_blank'><Svg name='github' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
+      <a href='https://codepen.io/qwenloh' title='Codepen' target='_blank'><Svg name='codepen' viewBox='0 0 24 24' width='30' height='30' fill='#2f3640'/></a>
     </div>
   </div>);
 }

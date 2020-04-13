@@ -16,7 +16,7 @@ const About = (props) => {
     let offset =
     entries.forEach(entry=>{
       if(entry.intersectionRatio > 0){
-        console.log(entry.target);
+        // console.log('about observer triggered', entry.target);
         entry.target.classList.remove('init');
         entry.target.classList.add('fade-in');
         observer.unobserve(entry.target);
@@ -61,7 +61,7 @@ const About = (props) => {
       <div id="resume">
         <p>Resume</p>
         <div id="view">
-          <a href={Resume} target='_blank'><Svg name='view' width='20' height='20' viewBox='0 0 512 512' fill='#6c5ce7' /></a>
+          <a href={Resume} title='View resume' target='_blank'><Svg name='view' width='20' height='20' viewBox='0 0 512 512' fill='#6c5ce7' /></a>
         </div>
         <div id='download-button' onMouseLeave={()=>setDrop(false)}>
           <p>Download</p>
@@ -77,6 +77,9 @@ const About = (props) => {
         </div>
       </div>
     </div>
+    <div id="icon-credit"><p>
+      Icons used on this page are made by <a href="https://www.flaticon.com/authors/mynamepong" target='_blank' title="mynamepong">mynamepong</a>, <a href="https://www.flaticon.com/authors/pongsakornred" target='_blank' title="pongsakornRed">pongsakornRed</a>, <a href="https://www.flaticon.com/authors/pixel-perfect" target='_blank' title="Pixel perfect">Pixel perfect</a>, and by <a href="https://www.flaticon.com/authors/freepik" target='_blank' title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </p></div>
     </div>
   );
 }

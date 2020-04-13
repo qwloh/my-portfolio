@@ -30,8 +30,8 @@ const PopUp = (props) => {
     }
   }
 
-  const featureList = project.moreInfo.features.map((x)=>{
-    return (<li>{x}</li>);
+  const featureList = project.moreInfo.features.map((x, index)=>{
+    return (<li key={index}>{x}</li>);
   })
 
   useEffect(()=>{

@@ -6,6 +6,8 @@
   left: 0;
   height: 100vh;
   width: 100%;
+  overflow-y:hidden; //code for Edge
+  overflox-x:hidden;// code for Edge
   background: rgba(255, 255, 255, 0.8);
   z-index: 3;
 }

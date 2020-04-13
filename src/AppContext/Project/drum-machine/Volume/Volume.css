@@ -37,3 +37,32 @@
   background:var(--dark);
   margin:-4px;
 }
+
+#volume input::-moz-range-track{
+  height:2px;
+  border-radius:1px;
+  background:var(--light);
+}
+
+#volume input::-moz-range-thumb{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:none;
+  background:var(--dark);
+  margin:-8px;
+}
+
+#volume input::-ms-track{
+  height:2px;
+  border-radius:1px;
+  background:pink;
+}
+
+#volume input::-ms-thumb{
+  width:16px;
+  height:2px;
+  border-radius:1px;
+  background:#ED4C67;
+  margin:0px;
+}
