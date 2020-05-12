@@ -39,15 +39,15 @@ const About = (props) => {
       <div className="paragraph">
         <div className="paragraph-inner">
           <p>I studied materials engineering and worked as a researcher at National University of Singapore before discovering my passion in web technology.</p>
-          <p>To me, web development is exciting because I enjoy building tools that people use and delivering thoughtful user experience. </p>
-          <p>Currently, I am actively learning about the Jest testing framework so that I can take my web development skills to the next level.</p>
+          <p>To me, web development is exciting because I enjoy building tools that address people's needs and delivering thoughtful user experience along with the solution.</p>
+          <p>I'm most motivated when working on projects that positively impact the world.</p>
           <p>Let's get in touch if you have a project to collaborate!</p>
         </div>
       </div>
       <div className="extra">
         <div id="cause">
           <p className='extra-label'>Cause</p>
-          <p>Sustainability, Accessibility</p>
+          <p>Sustainability, Accessibility, Equality</p>
         </div>
         <div id="fan-of">
         <p className='extra-label'>Fan of</p>
