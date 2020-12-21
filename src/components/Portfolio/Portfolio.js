@@ -36,7 +36,7 @@ const Portfolio = (props) => {
     <div id='portfolio' className='info-section'>
       <div className="header init" ref={title}>
         <h1 id='portfolio-header'>Projects 💼</h1>
-        <p>My starter projects. Try them! they're fully interactive 🙌</p></div>
+        <p>My starter projects. Try them! They're fully interactive. </p></div>
       <div id="project-area">
         {cards}
       </div>
