@@ -38,7 +38,7 @@ const About = (props) => {
       <div className="about-me">
         <div className="paragraph">
           <div className="paragraph-inner">
-            <p>I worked as a materials researcher at National University of Singapore before discovering my passion for programming.</p>
+            <p>I worked as a materials researcher at National University of Singapore before discovering my passion for coding.</p>
             <p>To me, software development is exciting because I enjoy building tools that address people's needs and delivering thoughtful user experience along with the solution.</p>
             <p>I'm most motivated when working on projects that positively impact the world.</p>
             <p>Let's get in touch if you have a project to collaborate!</p>
