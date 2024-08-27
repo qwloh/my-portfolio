@@ -33,7 +33,7 @@ const App = () => {
       <div id="more-info-wrapper">
         <Skills />
         <Portfolio popUp={pop} />
-        <About />
+        {/* <About /> */}
       </div>
     </div>);
 

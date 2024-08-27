@@ -1,5 +1,9 @@
 @import 'media-mixins';
 
+body{
+  overscroll-behavior: none;
+}
+
 .init{
   opacity:0;
   transform:translateY(50px);
